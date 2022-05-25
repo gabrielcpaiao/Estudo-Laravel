@@ -1,0 +1,16 @@
+Anotações especificas:
+
+Mensagem de erro em seu código consultar os arquivos de log. Esses arquivos ficam no diretório /storage/logs/
+
+
+O primeiro ( up) ensina como criar a tabela produto, enquanto o segundo ( down) mostra como 
+    desfazê-la, ou seja, fazer um rollback
+
+    Para executar uma migration basta dar o comando (php artisan migrate).
+
+    Se você acabou de executar o comando migrate e viu que alguma coisa não saiu como esperado, basta executar
+    um (php artisan migrate:rollback)
+
+    Execute o comando (php artisan db:seed)
+
+    para atualizar o banco de dados (php artisan migrate:fresh)
