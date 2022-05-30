@@ -4,6 +4,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\ProdutooController;
+use Illuminate\Http\Request;
 
 /*
 |--------------------------------------------------------------------------
@@ -21,3 +22,6 @@ Route::get('/', function () {
 });
 
 Route::get('/produtos', 'ProdutoController@lista');
+
+Route::get('/produtos/mostra', 'ProdutoController@mostra');
+//Route::get('/produtos/mostra/{id}', 'ProdutoController@mostra');
