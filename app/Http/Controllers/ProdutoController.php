@@ -46,7 +46,11 @@ class ProdutoController extends Controller {
         /*
             gerar a view a partir de um diretorio diferente    
             view()->file('/caminho/para/view');
-        */   
+        */
+
+
+        //Para buscar uma lista de produtos em branco
+        //return view('listagem')->with('produtos', array());
     }
 
     public function mostra(Request $request){

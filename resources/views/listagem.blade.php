@@ -1,3 +1,44 @@
+/*
+@extends('principal')
+@section('conteudo')
+
+@if(empty($produtos))
+	<div class="alert alert-danger">
+		Você não tem nenhum produto cadastrado.
+	</div>
+	@else
+		<h1>Listagem de produtos</h1>
+		<table class="table table-striped table-bordered table-hover">
+            @foreach ($produtos as $p)
+                <tr>
+                    <td>{{ $p->nome }}</td>
+                    <td>{{ $p->valor }}</td>
+                    <td>{{ $p->descricao }}</td>
+                    <td>{{ $p->quantidade }}</td>
+                    <td>
+                        <a href="/produtos/mostra?id={{ $p->id }}"><span class="glyphicon glyphicon-search"></span></a>
+                        //<a href="/produtos/mostra/{{ $p->id }}"><span class="glyphicon glyphicon-search"></span></a>
+                        <!--
+                            ?id={{ $p->id }}, ou seja, estamos passando um parâmetro na requisição chamado id, com o valor
+                            do id do produto
+                        -->
+                    </td>
+                </tr>
+            @endforeach
+        </table>
+		@foreach ($produtos as $p)
+			<!-- continuação do código -->
+		@endforeach
+@endif
+<h4>
+    <span class="label label-danger pull-right">
+        Um ou menos itens no estoque
+    </span>
+</h4>
+@stop
+*/
+
+
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
@@ -13,7 +54,7 @@
 
         <table class="table table-striped table-bordered table-hover">
             @foreach ($produtos as $p)
-                <tr>
+                <tr class="{{$p->quantidade<=1 ? 'danger' : ''}}">
                     <td>{{ $p->nome }}</td>
                     <td>{{ $p->valor }}</td>
                     <td>{{ $p->descricao }}</td>
