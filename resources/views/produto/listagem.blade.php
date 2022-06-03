@@ -1,5 +1,4 @@
-/*
-@extends('principal')
+@extends('layout.principal')
 @section('conteudo')
 
 @if(empty($produtos))
@@ -36,9 +35,13 @@
     </span>
 </h4>
 @stop
-*/
 
 
+
+
+
+
+/*
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
@@ -73,3 +76,4 @@
     </div>
 </body>
 </html>
+*/

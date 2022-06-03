@@ -1,5 +1,5 @@
-/*
-@extends('prinicpal')
+
+@extends('layout.prinicpal')
 @section('conteudo')
 <h1>Detalhes do produto: {{$p->nome}} </h1>
 <ul>
@@ -14,10 +14,10 @@
     </li>
 </ul>
 @stop
-*/
 
 
 
+/*
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
@@ -44,3 +44,4 @@
     </div>
 </body>
 </html>
+*/

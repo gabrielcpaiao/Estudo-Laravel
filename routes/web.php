@@ -2,8 +2,9 @@
 
 //protected $namespace = 'App\Http\Controllers';
 
+
 use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\ProdutooController;
+use App\Http\Controllers\ProdutoController;
 use Illuminate\Http\Request;
 
 /*
@@ -25,3 +26,9 @@ Route::get('/produtos', 'ProdutoController@lista');
 
 Route::get('/produtos/mostra', 'ProdutoController@mostra');
 //Route::get('/produtos/mostra/{id}', 'ProdutoController@mostra');
+
+Route::get('/produtos/novo', 'ProdutoController@novo');
+
+//Rota que aponta para o metodo adiciona no ProdutoController
+//Route::get('/produtos/adiciona', 'ProdutoController@adiciona');
+Route::post('/produtos/adiciona', [ProdutoController::class,'adiciona']);
