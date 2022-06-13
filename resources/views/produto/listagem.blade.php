@@ -17,6 +17,7 @@
                     <td>
                         <a href="/produtos/mostra?id={{ $p->id }}"><span class="glyphicon glyphicon-search"></span></a>
                         //<a href="/produtos/mostra/{{ $p->id }}"><span class="glyphicon glyphicon-search"></span></a>
+                        <a href="{{action('ProdutoController@remove', $p->id)}}"><span class="glyphicon glyphicon-trash"></span></a>
                         <!--
                             ?id={{ $p->id }}, ou seja, estamos passando um parâmetro na requisição chamado id, com o valor
                             do id do produto
@@ -34,12 +35,14 @@
         Um ou menos itens no estoque
     </span>
 </h4>
+
+@if(old('nome'))
+    <div class="alert alert-success">
+        <strong>Sucesso!</strong> O produto {{old('nome')}} foi adicionado.
+    </div>
+@endif
+
 @stop
-
-
-
-
-
 
 /*
 <!DOCTYPE html>
